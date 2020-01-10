@@ -57,9 +57,17 @@
     "node": ">=8.9.3"
   },
   "scripts": {
-    "start": "npm run server",
+    "start": "concurrently \"npm run wds\" \"npm run server\"",
+    "wds": "./node_modules/.bin/webpack-dev-server --open --hot",
     "docker": "docker-compose up",
     "server": "nodemon --watch server server/index.js",
+    "build:dev": "./node_modules/.bin/webpack",
+    "build:prod": "./node_modules/.bin/webpack --mode=production",
+    "build:watch": "./node_modules/.bin/webpack -w",
+    "lint": "npm run lintServer; npm run lintCSS",
+    "lintCSS": "node_modules/.bin/stylelint --fix src/**/*",
+    "lintServer": "node_modules/.bin/eslint --fix server/",
+    "start": "node server.js",
     "heroku-postbuild": "webpack -p"
   }
 }
