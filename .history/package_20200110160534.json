@@ -5,8 +5,7 @@
     "email": "marcus@mtss.dev"
   },
   "version": "0.0.1",
-  "license": "MIT",
-  "description": "Using webpack's scaffolding to test MERN's CRUD method in a todo's list. ",
+  "description": "",
   "dependencies": {
     "body-parser": "^1.18.2",
     "chalk": "^2.3.2",

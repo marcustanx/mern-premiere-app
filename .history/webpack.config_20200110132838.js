@@ -85,11 +85,11 @@ module.exports = () => {
 				canPrint: true
 			}),
 
-			// // CSS Linter based on rules set in the .stylelintrc file
-			// new StyleLintPlugin({
-			// 	configFile: "./.stylelintrc",
-			// 	files: "./src/scss/*.scss"
-			// }),
+			// CSS Linter based on rules set in the .stylelintrc file
+			new StyleLintPlugin({
+				configFile: "./.stylelintrc",
+				files: "./src/scss/*.scss"
+			}),
 
 			new WebpackBar(),
 
